@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <Canvas fx:id="theCanvas" height="254.0" width="456.0" BorderPane.alignment="TOP_RIGHT">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </Canvas>
+   </center>
+   <bottom>
+      <TableView fx:id="UDPmessage" prefHeight="122.0" prefWidth="384.0" BorderPane.alignment="CENTER">
+        <columns>
+            <TableColumn prefWidth="108.20001220703125" text="Time" />
+          <TableColumn prefWidth="137.5999755859375" text="Commands" />
+          <TableColumn prefWidth="162.4000244140625" text="Length" />
+            <TableColumn prefWidth="67.79998779296875" text="IP" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </TableView>
+   </bottom>
+   <left>
+      <VBox prefHeight="278.0" prefWidth="167.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="50.0" prefWidth="167.0">
+               <children>
+                  <Label fx:id="ToggleButtonECHO" alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="46.0" prefWidth="94.0" text="Echoserver on 127.0.0.1:7000" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ToggleButton fx:id="toggleButtonEcho" alignment="CENTER_RIGHT" contentDisplay="BOTTOM" mnemonicParsing="false" text="ON">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </ToggleButton>
+               </children>
+               <VBox.margin>
+                  <Insets top="90.0" />
+               </VBox.margin></HBox>
+            <HBox prefHeight="54.0" prefWidth="95.0">
+               <children>
+                  <Label alignment="TOP_RIGHT" prefHeight="43.0" prefWidth="89.0" text="Broadcast on port: 7007" textAlignment="CENTER" wrapText="true">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Button mnemonicParsing="false" prefHeight="12.0" prefWidth="34.0" text="ON">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin></Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <ToggleButton contentDisplay="CENTER" mnemonicParsing="false" text="Clear Table">
+               <VBox.margin>
+                  <Insets left="30.0" top="10.0" />
+               </VBox.margin>
+            </ToggleButton>
+         </children></VBox>
+   </left>
+   <top>
+      <TilePane prefHeight="23.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" text="Boomerang" TilePane.alignment="CENTER" />
+         </children></TilePane>
+   </top>
+</BorderPane>
